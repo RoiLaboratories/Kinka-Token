@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+@import "tailwindcss";
+
+body {
+  font-family: "Spicy Rice", serif;
+  color: #fff;
+  background-color: var(--color-primary-light);
+}
+
+@theme static {
+  --color-primary: #0d99ff;
+  --color-primary-dark: #026ecf;
+  --color-primary-light: #7cb1e7;
+  --font-sora: "Sora", serif;
+}
+
+@layer components {
+  .flex-center {
+    @apply justify-center items-center flex;
+  }
+  .shadowed-header {
+    text-shadow: -5px 0 #026ecf, 0 5px #026ecf, 5px 0 #026ecf, 0 -5px #026ecf;
+  }
+
+  /* slider-controls */
+  .slick-dots {
+    bottom: -50px !important;
+  }
+  .slick-dots li button::before {
+    font-size: 12px !important;
+  }
+  .slick-dots li.slick-active button::before {
+    color: #026ecf !important;
+  }
+  .slick-dots li {
+    margin: 0 2px !important;
+  }
+  .slick-slide > div {
+    margin: 0 10px;
+  }
+}
+
+/* text-shadow: 0px 0px 8px #026ecf; */
+button,
+.button {
+  @apply rounded-md transition-all focus:outline-none focus:scale-[0.98] duration-300 ease-in-out cursor-pointer flex justify-center gap-x-2 items-center disabled:cursor-not-allowed disabled:opacity-50 py-1.5 px-4 lg:px-6;
+}
