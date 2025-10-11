@@ -43,7 +43,7 @@ function App() {
       {/*dynamic header */}
       <div
         className={`fixed w-full transition-transform duration-500 top-0 left-0 right-0 z-50 ${
-          headerActive ? "translate-y-0 visible" : "-translate-y-full invisible"
+          headerActive ? "show" : "hide"
         }`}
       >
         <Header />

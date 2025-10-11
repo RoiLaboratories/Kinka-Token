@@ -74,7 +74,7 @@ function Header() {
             href={
               "https://drive.google.com/file/d/1B_lRnWuGnNSEECdBQ60CA4qTfAIWscy7/view?usp=sharing"
             }
-            className="border-3 bg-white border-black text-primary-dark py-1! md:py-1.5! button"
+            className="border-3 bg-white hover:bg-primary-dark hover:text-white border-black text-primary-dark py-1! md:py-1.5! button hover:shadow-[0_5px_5px_#fff] hover:-translate-y-[3px] duration-500!"
           >
             Whitepaper
           </motion.a>

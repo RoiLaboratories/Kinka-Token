@@ -20,9 +20,14 @@ body {
     @apply justify-center items-center flex;
   }
   .shadowed-header {
-    text-shadow: -5px 0 #026ecf, 0 5px #026ecf, 5px 0 #026ecf, 0 -5px #026ecf;
+    text-shadow: 5px 5px 0 #026ecf;
+    /*  filter: drop-shadow(4px 4px 0 #026ecf) drop-shadow(-4px -4px 0 #026ecf); */
+    /* text-shadow: -5px 0 0 #026ecf, 0 5px 0 #026ecf, 5px 0 0 #026ecf,
+      0 -5px 0 #026ecf; */
   }
-
+  /* color: #FFFFFF;
+background: #FFFFFF;
+text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8; */
   /* slider-controls */
   .slick-dots {
     bottom: -50px !important;
@@ -39,6 +44,15 @@ body {
   .slick-slide > div {
     margin: 0 10px;
   }
+}
+
+.show {
+  transform: translateY(0);
+  visibility: visible;
+}
+.hide {
+  transform: translateY(-100%);
+  visibility: hidden;
 }
 
 /* text-shadow: 0px 0px 8px #026ecf; */

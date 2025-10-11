@@ -72,10 +72,10 @@ function Vision() {
             },
           }}
           transition={{ delay: 0.9 }}
-          className="text-lg border-3 bg-primary-dark border-black rounded-2xl! py-2!"
-          style={{
-            boxShadow: "0px 2px 2px 1px #026ecf",
-          }}
+          className="z-1 relative text-lg border-3 bg-primary-dark hover:bg-white hover:text-primary-dark border-black rounded-2xl! py-2! hover:-translate-y-[5px] shadow-[0_4px_4px_#026ecf] hover:shadow-[0_10px_10px_#026ecf] transform duration-500! "
+          // style={{
+          //   boxShadow: "0px 2px 2px 1px #026ecf",
+          // }}
         >
           Learn more
         </motion.button>
@@ -85,3 +85,4 @@ function Vision() {
 }
 
 export default Vision;
+// before:absolute before:left-0 before:bg-green-300 before:h-full before:w-full before:rounded-2xl! before:shadow-[0_10px_2px_#026ecf] before:-z-1

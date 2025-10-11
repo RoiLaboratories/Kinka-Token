@@ -136,12 +136,14 @@ function Roadmap() {
                     <span className="w-1.5 h-full bg-white absolute left-1/2 -translate-x-1/2" />
                   </div>
                   <div
-                    className={` bg-primary-dark rounded-2xl p-6 space-y-4 ${
-                      isOdd && "md:rotate-180"
+                    className={`shadow-[0_2px_2px_1px_#fff] hover:shadow-[0_10px_10px_2px_#fff] duration-500  bg-primary-dark rounded-2xl p-6 space-y-4 ${
+                      isOdd
+                        ? "md:rotate-180 hover:translate-y-[5px]"
+                        : "hover:-translate-y-[5px]"
                     }`}
-                    style={{
-                      boxShadow: "0px 2px 2px 1px #fff",
-                    }}
+                    // style={{
+                    //   boxShadow: "0px 2px 2px 1px #fff",
+                    // }}
                   >
                     <p className="text-center">{title}</p>
                     <ul className="text-sm list-decimal list-inside space-y-2">
@@ -150,7 +152,7 @@ function Roadmap() {
                       ))}
                     </ul>
                     <button
-                      className="text-lg mx-auto border-2 bg-white border-black rounded-full! p-1.5!"
+                      className="text-lg mx-auto border-2 bg-white hover:bg-primary-dark group border-black rounded-full! p-1.5!"
                       style={{
                         boxShadow: "0px 2px 2px 1px #fff",
                       }}
@@ -158,7 +160,8 @@ function Roadmap() {
                       <Icon
                         icon="ic:round-double-arrow"
                         fontSize={25}
-                        color="#026ecf"
+                        className="text-primary-dark group-hover:text-white group-hover:animate-pulse"
+                        // color="#026ecf"
                       />
                     </button>
                   </div>
@@ -195,15 +198,8 @@ function Roadmap() {
               </div>
               <div className="h-20 relative">
                 <span className="w-1.5 h-full bg-white absolute left-1/2 -translate-x-1/2" />
-
-                {/* <span className="w-1.5 h-full bg-white absolute left-1/2 -translate-x-1/2" />
-                <Icon
-                  icon="fluent:animal-paw-print-20-filled"
-                  fontSize={50}
-                  className=" absolute -translate-y-full left-1/2 -translate-x-1/2"
-                /> */}
               </div>
-              <div className=" bg-primary-dark rounded-2xl p-6 space-y-4 md:rotate-180">
+              <div className=" bg-primary-dark rounded-2xl p-6 space-y-4 md:rotate-180 shadow-[0_2px_2px_1px_#fff] hover:shadow-[0_10px_10px_2px_#fff] duration-500 hover:translate-y-[5px]">
                 <p className="text-center">Mass Adoption & Charity</p>
                 <ul className="text-sm list-decimal list-inside space-y-2">
                   <li>Expand globally, targeting emerging markets</li>
@@ -217,10 +213,10 @@ function Roadmap() {
                   href={
                     "https://drive.google.com/file/d/1B_lRnWuGnNSEECdBQ60CA4qTfAIWscy7/view?usp=sharing"
                   }
-                  className=" mx-auto border-2 text-primary-dark text-xs bg-white rounded-xl! border-black px-3! button w-fit"
-                  style={{
-                    boxShadow: "0px 2px 2px 1px #fff",
-                  }}
+                  className=" mx-auto border-2 text-primary-dark text-xs bg-white rounded-xl! border-black px-3! button w-fit hover:bg-primary-dark hover:text-white hover:-translate-y-[3px] hover:shadow-[0_5px_5px_#fff] shadow-[0_2px_2px_1px_#fff] duration-500!"
+                  // style={{
+                  //   boxShadow: "0px 2px 2px 1px #fff",
+                  // }}
                 >
                   Learn more
                 </a>

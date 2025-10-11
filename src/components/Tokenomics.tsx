@@ -1,4 +1,4 @@
-import { Icon } from "@iconify/react";
+// import { Icon } from "@iconify/react";
 import { useAnimation, useInView, motion } from "motion/react";
 import { useEffect, useRef } from "react";
 
@@ -123,16 +123,22 @@ function Tokenomics() {
                     delay: 0.7 + i * 0.15,
                     duration: 0.3,
                   }}
-                  className="flex items-center gap-2"
+                  className="flex items-center gap-4"
                   key={i}
                 >
                   <span>
-                    <Icon
+                    <input
+                      type="checkbox"
+                      checked
+                      readOnly
+                      className="checked:accent-primary-dark size-4"
+                    />
+                  </span>
+                  {/* <Icon
                       icon="mingcute:hand-finger-fill"
                       className="rotate-90 text-primary-dark"
                       fontSize={24}
-                    />
-                  </span>
+                    /> */}
                   <p className="text-sm md:text-base">{item}</p>
                 </motion.li>
               ))}
