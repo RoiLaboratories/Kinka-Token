@@ -11,7 +11,7 @@ import Header from "./components/Header";
 import SplashScreen from "./components/SplashScreen";
 
 function App() {
-  const [headerActive, setHeaderActive] = useState(false);
+  // const [headerActive, setHeaderActive] = useState(false);
   const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
@@ -20,19 +20,20 @@ function App() {
     return () => clearTimeout(timer);
   }, []);
 
-  useEffect(() => {
-    const header = document.querySelector(".header");
-    const headerHeight = header?.getBoundingClientRect().height;
+  // useEffect(() => {
+  //   const header = document.querySelector(".header");
+  //   const headerHeight = header?.getBoundingClientRect().height;
 
-    const handleScroll = () => {
-      setHeaderActive(window.scrollY > headerHeight!);
-    };
+  //   const handleScroll = () => {
+  //     console.log(headerHeight);
+  //     setHeaderActive(window.scrollY > headerHeight!);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   if (showSplash) {
     return <SplashScreen />;
@@ -42,9 +43,7 @@ function App() {
     <main className="grid grid-cols-1 min-h-screen w-full">
       {/*dynamic header */}
       <div
-        className={`fixed w-full transition-transform duration-500 top-0 left-0 right-0 z-50 ${
-          headerActive ? "show" : "hide"
-        }`}
+        className={`fixed w-full transition-transform duration-500 top-0 left-0 right-0 z-50 `}
       >
         <Header />
       </div>

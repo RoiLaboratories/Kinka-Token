@@ -43,8 +43,9 @@ function Hero() {
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: [0.5, 1.1, 1] }}
         transition={{ delay: 0.5 }}
-        className="-z-10 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 items-center mx-auto w-9/10 md:w-6/10 border-4 rounded-3xl border-primary-dark bg-black/80 flex flex-row p-10 lg:p-14"
+        className="-z-10 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 items-center mx-auto w-9/10 md:w-6/10 border-4 rounded-3xl border-primary-dark bg-black/80 flex flex-row p-10 lg:p-14  duration-500"
       >
+        {/* shadow-[0_10px_10px_2px_#026ecf] */}
         <motion.img
           initial={{ opacity: 0, x: -75 }}
           animate={{ opacity: 1, x: 0 }}

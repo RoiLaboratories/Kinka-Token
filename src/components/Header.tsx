@@ -30,7 +30,7 @@ function Header() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="mx-auto w-[95%] md:max-w-7xl flex items-center justify-between"
+        className="mx-auto w-[95%] pmd:max-w-7xl flex items-center justify-between"
       >
         <motion.img
           initial={{ opacity: 0, x: -100 }}

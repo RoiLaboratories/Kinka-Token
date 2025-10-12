@@ -1,4 +1,4 @@
-// import { Icon } from "@iconify/react";
+import { Icon } from "@iconify/react";
 import { useAnimation, useInView, motion } from "motion/react";
 import { useEffect, useRef } from "react";
 
@@ -79,10 +79,10 @@ function Tokenomics() {
               },
             }}
             transition={{ delay: 0.6 }}
-            className="rounded-2xl px-8 py-12 space-y-14 bg-black border-3 border-white"
-            style={{
-              boxShadow: "0px 4px 2px 1px #026ecf",
-            }}
+            className="rounded-2xl px-8 py-12 space-y-14 bg-black border-3 border-white shadow-[0_4px_2px_1px_#026ecf] hover:shadow-[0_12px_10px_2px_#026ecf] hover:-translate-y-[5px] duration-500"
+            // style={{
+            //   boxShadow: "0px 4px 2px 1px #026ecf",
+            // }}
           >
             <motion.p
               animate={mainControls}
@@ -127,18 +127,18 @@ function Tokenomics() {
                   key={i}
                 >
                   <span>
-                    <input
+                    {/* <input
                       type="checkbox"
                       checked
                       readOnly
                       className="checked:accent-primary-dark size-4"
-                    />
-                  </span>
-                  {/* <Icon
+                    /> */}
+                    <Icon
                       icon="mingcute:hand-finger-fill"
                       className="rotate-90 text-primary-dark"
                       fontSize={24}
-                    /> */}
+                    />
+                  </span>
                   <p className="text-sm md:text-base">{item}</p>
                 </motion.li>
               ))}

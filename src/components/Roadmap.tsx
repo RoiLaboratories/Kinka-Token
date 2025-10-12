@@ -31,6 +31,14 @@ const mapData = [
       "Introduce a governance system for token holder voting",
     ],
   },
+  {
+    title: "Mass Adoption & Charity",
+    list: [
+      " Expand globally, targeting emerging markets",
+      "Launch a mobile app for easy platform access",
+      "Enable merchants to accept $KINKA as payment",
+    ],
+  },
 ];
 // grid grid-cols-[auto_1fr]
 function Roadmap() {
@@ -102,7 +110,7 @@ function Roadmap() {
           {/* -translate-y-[10%] */}
           <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-4 gap-10 px-10">
             {/*MAP ITEMS */}
-            {mapData.map(({ list, title }, i) => {
+            {mapData.map((item, i) => {
               const isOdd = i % 2 !== 0;
               return (
                 <motion.div
@@ -145,83 +153,58 @@ function Roadmap() {
                     //   boxShadow: "0px 2px 2px 1px #fff",
                     // }}
                   >
-                    <p className="text-center">{title}</p>
-                    <ul className="text-sm list-decimal list-inside space-y-2">
-                      {list.map((item, i) => (
-                        <li key={i}>{item}</li>
+                    <p className="text-center">{item.title}</p>
+                    <ul className="text-sm space-y-2">
+                      {item.list.map((listItem, i) => (
+                        <li key={i} className="flex gap-4">
+                          <span>
+                            <input
+                              type="checkbox"
+                              checked={item.title === "Development and Launch"}
+                              readOnly
+                              className="checked:accent-blue-950 size-4"
+                            />
+                          </span>
+                          {listItem}
+                        </li>
                       ))}
                     </ul>
-                    <button
-                      className="text-lg mx-auto border-2 bg-white hover:bg-primary-dark group border-black rounded-full! p-1.5!"
-                      style={{
-                        boxShadow: "0px 2px 2px 1px #fff",
-                      }}
-                    >
-                      <Icon
-                        icon="ic:round-double-arrow"
-                        fontSize={25}
-                        className="text-primary-dark group-hover:text-white group-hover:animate-pulse"
-                        // color="#026ecf"
-                      />
-                    </button>
+
+                    {i === item.list.length ? (
+                      <a
+                        target="_blank"
+                        referrerPolicy="no-referrer"
+                        href={
+                          "https://drive.google.com/file/d/1B_lRnWuGnNSEECdBQ60CA4qTfAIWscy7/view?usp=sharing"
+                        }
+                        className=" mx-auto border-2 text-primary-dark text-xs bg-white rounded-xl! border-black px-3! button w-fit hover:bg-primary-dark hover:text-white hover:-translate-y-[3px] hover:shadow-[0_5px_5px_#fff] shadow-[0_2px_2px_1px_#fff] duration-500!"
+                        // style={{
+                        //   boxShadow: "0px 2px 2px 1px #fff",
+                        // }}
+                      >
+                        Learn more
+                      </a>
+                    ) : (
+                      <button
+                        className="text-lg mx-auto border-2 bg-white hover:bg-primary-dark group border-black rounded-full! p-1.5!"
+                        style={{
+                          boxShadow: "0px 2px 2px 1px #fff",
+                        }}
+                      >
+                        <Icon
+                          icon="ic:round-double-arrow"
+                          fontSize={25}
+                          className="text-primary-dark group-hover:text-white group-hover:animate-pulse"
+                          // color="#026ecf"
+                        />
+                      </button>
+                    )}
                   </div>
                 </motion.div>
               );
             })}
 
             {/*last content */}
-            <motion.div
-              animate={mainControls}
-              initial="hidden"
-              variants={{
-                hidden: {
-                  opacity: 0,
-                  y: 100,
-                },
-                visible: {
-                  opacity: 1,
-                  y: 0,
-                },
-              }}
-              transition={{
-                duration: 0.3,
-                delay: 0.6 + mapData.length * 0.15,
-              }}
-              className="md:rotate-180 md:mt-[10%]"
-            >
-              <div className="relative h-14">
-                <Icon
-                  icon="fluent:animal-paw-print-20-filled"
-                  fontSize={65}
-                  className="absolute left-1/2 -bottom-2 -translate-x-1/2 text-primary-dark"
-                />
-              </div>
-              <div className="h-20 relative">
-                <span className="w-1.5 h-full bg-white absolute left-1/2 -translate-x-1/2" />
-              </div>
-              <div className=" bg-primary-dark rounded-2xl p-6 space-y-4 md:rotate-180 shadow-[0_2px_2px_1px_#fff] hover:shadow-[0_10px_10px_2px_#fff] duration-500 hover:translate-y-[5px]">
-                <p className="text-center">Mass Adoption & Charity</p>
-                <ul className="text-sm list-decimal list-inside space-y-2">
-                  <li>Expand globally, targeting emerging markets</li>
-                  <li>Launch a mobile app for easy platform access</li>
-                  <li>Enable merchants to accept $KINKA as payment</li>
-                  <li>Enable merchants to accept $KINKA as payment</li>
-                </ul>
-                <a
-                  target="_blank"
-                  referrerPolicy="no-referrer"
-                  href={
-                    "https://drive.google.com/file/d/1B_lRnWuGnNSEECdBQ60CA4qTfAIWscy7/view?usp=sharing"
-                  }
-                  className=" mx-auto border-2 text-primary-dark text-xs bg-white rounded-xl! border-black px-3! button w-fit hover:bg-primary-dark hover:text-white hover:-translate-y-[3px] hover:shadow-[0_5px_5px_#fff] shadow-[0_2px_2px_1px_#fff] duration-500!"
-                  // style={{
-                  //   boxShadow: "0px 2px 2px 1px #fff",
-                  // }}
-                >
-                  Learn more
-                </a>
-              </div>
-            </motion.div>
           </div>
         </div>
       </div>
