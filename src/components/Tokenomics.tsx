@@ -4,7 +4,8 @@ import { useEffect, useRef } from "react";
 
 const data = [
   "Liquidity: 200,000,000 (40%)",
-  "Reserve and Development: 100,000,000 (20%)",
+  "Reserve and Development: 50,000,000 (10%)",
+  "Initial Burn: 50,000,000 (10%)",
   "Marketing: 50,000,000 (10%)",
   "CEX Listing: 50,000,000 (10%)",
   "Charity: 25,000,000 (5%)",
@@ -104,7 +105,7 @@ function Tokenomics() {
             >
               Total Supply: 500,000,000 (500M KINKA)
             </motion.p>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 space-y-4">
+            <ul className="grid grid-cols-1 lg:grid-cols-2 gap-2 space-y-4">
               {data.map((item, i) => (
                 <motion.li
                   animate={mainControls}

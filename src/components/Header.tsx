@@ -30,7 +30,7 @@ function Header() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="mx-auto w-[95%] pmd:max-w-7xl flex items-center justify-between"
+        className="mx-auto w-[95%] md:max-w-7xl flex items-center justify-between"
       >
         <motion.img
           initial={{ opacity: 0, x: -100 }}
@@ -40,14 +40,14 @@ function Header() {
           className="w-10 h-12 md:w-24 md:h-20 object-contain"
         />
 
-        <nav className="space-x-6 lg:space-x-10 flex items-center">
+        <nav className="space-x-3 md:space-x-6 flex items-center">
           <ul className="space-x-6 hidden md:flex items-center lg:space-x-10">
             {links.map(({ label, path }, i) => (
               <motion.li
                 initial={{ opacity: 0, y: 75 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
-                  delay: 0.3 + i * 0.15,
+                  delay: 0.3 + i * 0.3,
                 }}
                 key={i}
               >
@@ -68,7 +68,20 @@ function Header() {
           <motion.a
             initial={{ opacity: 0, y: 75 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
+            transition={{ delay: 0.4 }}
+            target="_blank"
+            referrerPolicy="no-referrer"
+            href={
+              "https://pancakeswap.finance/swap?chain=bsc&inputCurrency=BNB&outputCurrency=0x4CF42771B73dACb4C2c78790dA77D64a9ae6bdBd&exactAmount=&exactField=INPUT"
+            }
+            className="border-3 bg-transparent hover:bg-white text-white border-black hover:text-primary-dark py-1! md:py-1.5! button hover:shadow-[0_5px_5px_#fff] hover:-translate-y-[3px] duration-500!"
+          >
+            Buy KINKA
+          </motion.a>
+          <motion.a
+            initial={{ opacity: 0, y: 75 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5 }}
             target="_blank"
             referrerPolicy="no-referrer"
             href={

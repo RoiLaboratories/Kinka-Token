@@ -36,7 +36,6 @@ function Hero() {
         className="absolute bottom-0 left-1/2 -translate-x-1/2 object-contain -z-10 w-5/10"
       />
 
-      {/* grid grid-cols-1 md:grid-cols-[auto_1fr] */}
       <Header />
 
       <motion.div
@@ -60,7 +59,7 @@ function Hero() {
           transition={{ delay: 1.0, ease: "easeInOut" }}
           className="space-y-6"
         >
-          <p className="text-3xl lg:text-5xl uppercase shadowed-header text-center md:text-left">
+          <p className="text-3xl lg:text-5xl uppercase shadowed-header text-center lg:text-left">
             Introduction
           </p>
           <p className="text-xs lg:text-sm text-center lg:text-left">
