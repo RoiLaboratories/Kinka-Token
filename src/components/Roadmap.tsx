@@ -10,12 +10,13 @@ const mapData = [
       "Token distribution",
       "Decentralized exchange listing",
       "Marketing campaigns",
-      "CG/CMC listing",
+      "PancakeSwap listing",
     ],
   },
   {
     title: "Platform Growth",
     list: [
+      "CG/CMC listing",
       "Kinka Farm and Kinka Pot development",
       "Strategic partnerships",
       "Security audit",
